@@ -17,3 +17,6 @@ class Student:
         self.student_age = student_age
         self.student_number = student_number
         self.courses_list = []
+
+    def enroll_course(self, course):
+        self.courses_list.append(course)
