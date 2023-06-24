@@ -8,3 +8,5 @@ class Course:
         self.course_id = uuid.uuid4()
         self.course_name = course_name
         self.course_mark = course_mark
+class Student:
+    total_students = 0
