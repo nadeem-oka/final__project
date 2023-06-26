@@ -96,3 +96,6 @@ existing_student = next((student for student in students_list if student.student
 
     elif selection == 5:
         student_number = input("Enter Student Number: ")
+existing_student = next((student for student in students_list if student.student_number == student_number), None)
+        if existing_student:
+            course_name = input("Enter Course Name: ")
