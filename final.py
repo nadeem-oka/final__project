@@ -67,11 +67,22 @@ existing_student = next((student for student in students_list if student.student
         student_number = input("Enter Student Number: ")
 
 existing_student = next((student for student in students_list if student.student_number == student_number), None)
-if existing_student:
+ if existing_student:
     students_list.remove(existing_student)
     print("Student Deleted Successfully")
-else:
+ else:
     print("Student Not Exist")
 
-elif selection == 3:
+ elif selection == 3:
 student_number = input("Enter Student Number: ")
+existing_student = next((student for student in students_list if student.student_number == student_number), None)
+        if existing_student:
+            student_details = existing_student.get_student_details()
+            print("Student Details:")
+            for key, value in student_details.items():
+                print(f"{key}: {value}")
+        else:
+            print("Student Not Exist")
+
+    elif selection == 4:
+        student_number = input("Enter Student Number: ")
