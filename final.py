@@ -27,4 +27,8 @@ class Student:
     def get_student_courses(self):
         for course in self.courses_list:
             print(f"Course Name: {course.course_name}, Mark: {course.course_mark}")
-6
+
+    def get_student_average(self):
+        total_marks = sum(course.course_mark for course in self.courses_list)
+        average = total_marks / len(self.courses_list)
+        return average
