@@ -55,3 +55,13 @@ while True:
                 break
             except ValueError:
                 print("Invalid input. Please enter a number.")
+existing_student = next((student for student in students_list if student.student_number == student_number), None)
+        if existing_student:
+            print("Student Number already exists. Please enter a unique Student Number.")
+        else:
+            new_student = Student(student_name, student_age, student_number)
+            students_list.append(new_student)
+            print("Student Added Successfully")
+
+    elif selection == 2:
+        student_number = input("Enter Student Number: ")
