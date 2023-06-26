@@ -32,3 +32,5 @@ class Student:
         total_marks = sum(course.course_mark for course in self.courses_list)
         average = total_marks / len(self.courses_list)
         return average
+
+students_list = []
