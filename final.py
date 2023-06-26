@@ -84,5 +84,15 @@ existing_student = next((student for student in students_list if student.student
         else:
             print("Student Not Exist")
 
-    elif selection == 4:
+        elif selection == 4:
+        student_number = input("Enter Student Number: ")
+
+existing_student = next((student for student in students_list if student.student_number == student_number), None)
+        if existing_student:
+            average = existing_student.get_student_average()
+            print(f"Student Average: {average}")
+        else:
+            print("Student Not Exist")
+
+    elif selection == 5:
         student_number = input("Enter Student Number: ")
